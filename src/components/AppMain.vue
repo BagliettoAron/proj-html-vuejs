@@ -1,14 +1,21 @@
 <template>
-  <div class="">
-    main
+
+  <div>
+    <!-- FINANCIAL RISK SECTION -->
+  <AppSection1 />
+  
   </div>
 </template>
 
 <script>
-export default {
-    name: 'AppMain'
+import AppSection1 from "./AppSection1.vue"
 
-}
+export default {
+  name: "AppMain",
+  components: {
+      AppSection1,
+  }
+};
 </script>
 
 <style lang="scss" scoped>

@@ -1,4 +1,17 @@
-body {
+// RESET
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+// FONT
+
+html {
     font-family: 'Poppins', sans-serif;
 }
 
+.big-container{
+    width: 70%;
+    margin: 0 auto;
+}

@@ -1,0 +1,19 @@
+@mixin button--solid{
+    text-transform: uppercase;
+    padding: .5rem 1rem;
+    background-color: $button-solid-color;
+    border: none;
+    border-radius: 3px;
+    color: $button-text-color;
+    font-size: .8rem
+}
+
+@mixin button--empty {
+    text-transform: uppercase;
+    padding: .5rem 1rem;
+    background-color: transparent;
+    border: 1px solid $button-solid-color;
+    border-radius: 3px;
+    color: $button-text-color;
+    font-size: .8rem;
+}

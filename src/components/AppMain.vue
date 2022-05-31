@@ -16,6 +16,14 @@
     <AppSection4 />
     <!-- / TEAM OF EXPERTS SECTION -->
 
+    <!-- LATEST NEWS SECTION -->
+    <AppSection5 />
+    <!-- / LATEST NEWS SECTION -->
+
+    <!-- KNOW FIRST SECTION -->
+    <AppSection6 />
+    <!-- / KNOW FIRST SECTION -->
+
   </div>
 </template>
 
@@ -24,6 +32,9 @@ import AppSection1 from "./main-components/AppSection1.vue";
 import AppSection2 from "./main-components/AppSection2.vue";
 import AppSection3 from "./main-components/AppSection3.vue";
 import AppSection4 from "./main-components/AppSection4.vue";
+import AppSection5 from "./main-components/AppSection5.vue";
+import AppSection6 from "./main-components/AppSection6.vue";
+
 
 export default {
   name: "AppMain",
@@ -32,6 +43,10 @@ export default {
     AppSection2,
     AppSection3,
     AppSection4,
+    AppSection5,
+    AppSection6
+
+
 
   },
 };

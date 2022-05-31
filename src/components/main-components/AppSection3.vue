@@ -48,31 +48,31 @@ export default {
                   paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
               },
                {
-                  leftIcon: "fas fa-network-wired",
+                  leftIcon: "fas fa-briefcase",
                   rightIcon: "fas fa-arrow-right",
                   title: "Financial Advisory",
                   paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
               },
                {
-                  leftIcon: "fas fa-network-wired",
+                  leftIcon: "fas fa-chart-bar",
                   rightIcon: "fas fa-arrow-right",
                   title: "Analytics and M&A",
                   paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
               },
                {
-                  leftIcon: "fas fa-network-wired",
+                  leftIcon: "fas fa-plane",
                   rightIcon: "fas fa-arrow-right",
                   title: "Middle Marketing",
                   paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
               },
                {
-                  leftIcon: "fas fa-network-wired",
+                  leftIcon: "fas fa-globe",
                   rightIcon: "fas fa-arrow-right",
                   title: "Legal Consulting",
                   paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
               },
                {
-                  leftIcon: "fas fa-network-wired",
+                  leftIcon: "fas fa-archive",
                   rightIcon: "fas fa-arrow-right",
                   title: "Regulatory Risk",
                   paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit."

@@ -24,7 +24,11 @@
     <AppSection6 />
     <!-- / KNOW FIRST SECTION -->
 
-  </div>
+    <!-- GET IN TOUCH SECTION -->
+    <AppSection7 />
+    <!-- GET IN TOUCH SECTION -->
+
+  </div>    
 </template>
 
 <script>
@@ -34,6 +38,7 @@ import AppSection3 from "./main-components/AppSection3.vue";
 import AppSection4 from "./main-components/AppSection4.vue";
 import AppSection5 from "./main-components/AppSection5.vue";
 import AppSection6 from "./main-components/AppSection6.vue";
+import AppSection7 from "./main-components/AppSection7.vue";
 
 
 export default {
@@ -44,7 +49,9 @@ export default {
     AppSection3,
     AppSection4,
     AppSection5,
-    AppSection6
+    AppSection6,
+    AppSection7
+
 
 
 

@@ -77,11 +77,12 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      margin-left: 1rem;
 
       input{
           background-color: $excellence-card-background;
-          height: calc(100% / 3 - 10px);
-          margin: 10 auto;
+          height: calc(100% / 3 - 20px);
+          margin: 10px;
           border: none;
           padding-left: 1rem;
           border-radius: 5px;
@@ -90,6 +91,7 @@ export default {
       button{
           @include button--solid();
           width: 8rem;
+          margin: 10px;
       }
   }
 

@@ -54,7 +54,7 @@
           temporibus reiciendis voluptates et id sint.
         </p>
         <div class="authorAndIcon">
-          <h4>T.Johnson</h4>
+          <h4>T. Johnson</h4>
           <i class="fas fa-quote-right"></i>
         </div>
       </div>

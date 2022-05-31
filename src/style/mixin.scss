@@ -25,3 +25,22 @@
     transform: translate(-50%, -50%);
     text-align: center;
 }
+
+@mixin smallTitle{
+    text-transform: uppercase;
+    color: $button-solid-color;
+    font-weight: 550;
+}
+
+@mixin h2SubTitle{
+    font-size: 2.5rem;
+    padding: 3rem 0;
+    font-weight: 800;
+}
+
+@mixin highLightTitle{
+    color: #098081;
+    background-color: #60a9ad3b;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}

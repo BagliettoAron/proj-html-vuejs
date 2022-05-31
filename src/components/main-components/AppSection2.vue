@@ -26,7 +26,9 @@
     </section>
 
     <section class="results-section">
-      <div class="resultsNumbers big-container">
+    <div class="big-container">
+    
+      <div class="resultsNumbers">
         <div class="resultsNumbers__content small-container">
           <small>what are we doing</small>
           <h2>
@@ -45,6 +47,7 @@
           </div>
         </div>
       </div>
+    </div>
     </section>
   </div>
 </template>
@@ -172,7 +175,7 @@ i {
 
   .skills {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 
     &__score__numberOf {
       color: $score-numbers-color;

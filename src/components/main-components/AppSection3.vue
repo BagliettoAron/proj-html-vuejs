@@ -1,7 +1,7 @@
 <template>
   <section class="excellenceInService">
     <div class="big-container">
-      <small>introduction video</small>
+      <small>our business area</small>
       <h2>
         <span class="grey-title">Excellence in</span>
         <span class="highlight-title">Services</span>

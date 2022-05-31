@@ -2,7 +2,7 @@
   <section class="teamOfExperts">
     <div class="big-container">
       <div class="left-side">
-        <small>introduction video</small>
+        <small>we like what we do</small>
         <h2>
           <span class="highlight-title">Team</span>
           <span class="grey-title">of Experts</span>
@@ -16,15 +16,24 @@
         </div>
 
         <div class="card-container">
-            <div class="card">
-                <div class="leftSide-card">
-                <img src="../../assets/img/team-1.jpg" alt="David Cooper">
-                </div>
-
-                <div class="rightSide-card">
-                
-                </div>
+          <div class="card" v-for="(teamMember, i) in teamCards" :key="i">
+            <div class="leftSide-card">
+              <img
+                :src="require(`../../assets/img/${teamMember.image}.jpg`)"
+                :alt="teamMember.name"
+              />
             </div>
+
+            <div class="rightSide-card">
+              <h4>{{ teamMember.name }}</h4>
+              <p>{{ teamMember.assignement }}</p>
+              <ul>
+                <li><i :class="teamMember.social1"></i></li>
+                <li><i :class="teamMember.social2"></i></li>
+                <li><i :class="teamMember.social3"></i></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -56,6 +65,44 @@
 <script>
 export default {
   name: "AppSection4",
+  data: function () {
+    return {
+      teamCards: [
+        {
+          image: "team-1",
+          name: "David Cooper",
+          assignement: "cto & co-founder",
+          social1: "fab fa-facebook",
+          social2: "fab fa-twitter",
+          social3: "fab fa-linkedin-in",
+        },
+        {
+          image: "team-3",
+          name: "Oliver Jones",
+          assignement: "chief procurement",
+          social1: "fab fa-facebook",
+          social2: "fab fa-twitter",
+          social3: "fab fa-linkedin-in",
+        },
+        {
+          image: "team-2",
+          name: "Emma Lopez",
+          assignement: "chief marketing",
+          social1: "fab fa-facebook",
+          social2: "fab fa-twitter",
+          social3: "fab fa-linkedin-in",
+        },
+        {
+          image: "team-4",
+          name: "T. Johnson",
+          assignement: "ceo & president",
+          social1: "fab fa-facebook",
+          social2: "fab fa-twitter",
+          social3: "fab fa-linkedin-in",
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -64,14 +111,16 @@ export default {
 @import "../../style/variables.scss";
 @import "../../style/mixin.scss";
 
+.big-container {
+  display: flex;
+}
+
 .teamOfExperts {
   width: 100%;
-  padding: 4rem 0;
-  height: 50rem;
+  padding: 5rem 0;
 
   .left-side {
-    width: 75%;
-    float: left;
+    width: 70%;
 
     small {
       @include smallTitle();
@@ -92,14 +141,69 @@ export default {
       color: $grey-title-color;
       margin-right: 0.5rem;
     }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+
+      .card {
+        width: calc(100% / 2 - 10px);
+        margin: 5px;
+
+        .leftSide-card {
+          width: 40%;
+          float: left;
+
+          img {
+            width: 100%;
+            border-radius: 5px;
+          }
+        }
+
+        .rightSide-card {
+          width: 60%;
+          float: left;
+
+          padding-left: 1rem;
+          padding-top: 1rem;
+
+          p {
+            text-transform: uppercase;
+            color: $grey-title-color;
+            font-size: 0.6rem;
+            padding-top: 1rem;
+          }
+
+          ul {
+            display: flex;
+            justify-content: flex-start;
+            padding-top: 1.5rem;
+
+            li {
+              padding-right: 0.5rem;
+
+              i {
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 35px;
+                background-color: $highlight-title-background;
+                color: $highlight-title-color;
+                display: inline-block;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   .right-side {
-    width: 25%;
+    width: 30%;
     background-color: $highlight-title-color;
-    height: 30rem;
-    float: left;
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: 5px;
 
     h3 {

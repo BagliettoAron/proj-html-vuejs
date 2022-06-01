@@ -19,12 +19,8 @@
           <div class="form-sectionTop">
             <!-- FIXME -->
 
-            <input class="inputName" type="text" placeholder="Name" />
-            <img
-              class="nameSymbol"
-              src="../../assets/img/image (1).png"
-              alt=""
-            />
+            <input type="text" placeholder="Name" />
+
             <input type="email" placeholder="Email" />
             <input type="number" placeholder="Phone" />
             <input type="text" placeholder="More Info" />
@@ -32,6 +28,7 @@
           <div class="form-sectionBottom">
             <input type="text" placeholder="Message" />
           </div>
+          <button class="sendButton" >send</button>
         </div>
 
         <div class="right-side">
@@ -115,14 +112,11 @@ export default {
           padding: 0.7rem 0 6rem 0.7rem;
           border-radius: 5px;
         }
+      }
 
-        .inputName {
-          position: relative;
-        }
-
-        .nameSymbol {
-          position: absolute;
-        }
+      .sendButton{
+          @include button--solid();
+          margin-top: .5rem;
       }
     }
 
@@ -134,7 +128,6 @@ export default {
       justify-content: space-between;
       margin-top: 5px;
 
-
       i {
         width: 35px;
         height: 35px;
@@ -144,23 +137,23 @@ export default {
         background-color: $highlight-title-background;
         color: $highlight-title-color;
         display: inline-block;
-        margin-right: .5rem
+        margin-right: 0.5rem;
       }
 
-      span{
-          font-size: .8rem;
-          color: $button-solid-color;
+      span {
+        font-size: 0.8rem;
+        color: $button-solid-color;
       }
 
-      p{
-          font-size: .8rem;
-          color: $grey-title-color;
+      p {
+        font-size: 0.8rem;
+        color: $grey-title-color;
       }
 
-      button{
-          @include button--empty();
-          width: 7rem;
-          color: $button-solid-color;
+      button {
+        @include button--empty();
+        width: 7rem;
+        color: $button-solid-color;
       }
     }
   }

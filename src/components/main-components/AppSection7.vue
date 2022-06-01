@@ -15,12 +15,8 @@
               </p>
             </div>
           </div>
-
           <div class="form-sectionTop">
-            <!-- FIXME -->
-
             <input type="text" placeholder="Name" />
-
             <input type="email" placeholder="Email" />
             <input type="number" placeholder="Phone" />
             <input type="text" placeholder="More Info" />
@@ -30,7 +26,6 @@
           </div>
           <button class="sendButton">send</button>
         </div>
-
         <div class="right-side">
           <h3>Example Inc.</h3>
           <p>
@@ -147,7 +142,7 @@ export default {
 
       p {
         font-size: 0.8rem;
-        color: $grey-title-color;
+        color: $grey-text-color;
       }
 
       button {

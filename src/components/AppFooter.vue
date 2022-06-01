@@ -1,6 +1,6 @@
 <template>
   <section class="footer">
-    <div class="big-container">
+    <div class="big-container section-menu">
       <div class="card-wrapper">
         <div class="card-menu left-menu">
           <div class="titleLogo">
@@ -9,58 +9,37 @@
           </div>
           <p>A functional HTML template for Corporate & Business.</p>
           <span class="iconText"
-            ><i class="fas fa-phone"></i> +01 (305) 1234-5678</span
+            ><i class="fas fa-phone"></i> {{ contactData.phoneNumber }}</span
           >
           <span class="iconText"
-            ><i class="fas fa-envelope"></i>hello@example.com</span
+            ><i class="fas fa-envelope"></i>{{ contactData.emailAdress }}</span
           >
           <span class="iconText"
-            ><i class="fas fa-map-marker-alt"></i>Main Avenue, 987</span
+            ><i class="fas fa-map-marker-alt"></i
+            >{{ contactData.position }}</span
           >
           <button>Get in Touch</button>
         </div>
 
-        <div class="card-menu">
+        <div class="card-menu" v-for="(item, i) in listItem" :key="i">
           <div class="cardContent">
-            <h3>title</h3>
-            <ul>
-              <li><i class="fas fa-chevron-right"></i>adefbadf</li>
-              <li><i class="fas fa-chevron-right"></i>sdfbbfd</li>
-              <li><i class="fas fa-chevron-right"></i>sbgsfgb</li>
-              <li><i class="fas fa-chevron-right"></i>sfgbsfbg</li>
-              <li><i class="fas fa-chevron-right"></i>sfrbg</li>
-              <li><i class="fas fa-chevron-right"></i>gfbs</li>
+            <h3>{{ item.title }}</h3>
+            <ul v-for="(itemList, i) in item.listMenu" :key="i">
+              <li><i class="fas fa-chevron-right"></i>{{ itemList }}</li>
             </ul>
           </div>
         </div>
-
-         <div class="card-menu">
-          <div class="cardContent">
-            <h3>title</h3>
-            <ul>
-              <li><i class="fas fa-chevron-right"></i>adefbadf</li>
-              <li><i class="fas fa-chevron-right"></i>sdfbbfd</li>
-              <li><i class="fas fa-chevron-right"></i>sbgsfgb</li>
-              <li><i class="fas fa-chevron-right"></i>sfgbsfbg</li>
-              <li><i class="fas fa-chevron-right"></i>sfrbg</li>
-              <li><i class="fas fa-chevron-right"></i>gfbs</li>
-            </ul>
-          </div>
-        </div>
-
-         <div class="card-menu">
-          <div class="cardContent">
-            <h3>title</h3>
-            <ul>
-              <li><i class="fas fa-chevron-right"></i>adefbadf</li>
-              <li><i class="fas fa-chevron-right"></i>sdfbbfd</li>
-              <li><i class="fas fa-chevron-right"></i>sbgsfgb</li>
-              <li><i class="fas fa-chevron-right"></i>sfgbsfbg</li>
-              <li><i class="fas fa-chevron-right"></i>sfrbg</li>
-              <li><i class="fas fa-chevron-right"></i>gfbs</li>
-            </ul>
-          </div>
-        </div>
+      </div>
+    </div>
+    <div class="bottom-footer">
+      <div class="big-container bottom-copyright">
+        <span
+          >Enjoy the low price. We are tracking any intention of piracy.</span
+        >
+        <span
+          >&#169; 2020 NEXGEN is Proudly Powered by
+          <span class="greenBottomFooter">Codings</span>.</span
+        >
       </div>
     </div>
   </section>
@@ -69,6 +48,10 @@
 <script>
 export default {
   name: "AppFooter",
+  props: {
+    listItem: Array,
+    contactData: Object,
+  },
 };
 </script>
 
@@ -84,7 +67,7 @@ export default {
   background-repeat: no-repeat;
   background-position: center;
 
-  .big-container {
+  .section-menu {
     padding: 7rem 0;
 
     .card-wrapper {
@@ -95,13 +78,13 @@ export default {
     .card-menu {
       width: calc(100% / 4 - 20px);
       margin: 10px;
-      min-height: 15rem;
+      min-height: 14rem;
 
       .cardContent {
         padding: 1rem;
         border-radius: 5px;
         background-color: $footer-bg-grey-cards;
-        min-height: 15rem;
+        min-height: 14rem;
 
         h3 {
           color: $financial-risk-title-color;
@@ -132,7 +115,7 @@ export default {
         text-transform: uppercase;
         margin-top: 1rem;
         color: $grey-text-color;
-        font-weight: 600;
+        font-weight: 900;
 
         .titleHighligts {
           text-transform: uppercase;
@@ -165,6 +148,24 @@ export default {
         color: $button-solid-color;
         font-size: 0.6rem;
       }
+    }
+  }
+}
+
+.bottom-footer {
+  width: 100%;
+  height: 4rem;
+  background-color: $bg-color-footer-bottom;
+
+  .bottom-copyright {
+    display: flex;
+    justify-content: space-between;
+    line-height: 4rem;
+    font-size: 0.7rem;
+    color: $grey-text-color;
+
+    .greenBottomFooter {
+      color: $button-solid-color;
     }
   }
 }

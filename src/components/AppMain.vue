@@ -51,11 +51,7 @@ export default {
     AppSection5,
     AppSection6,
     AppSection7
-
-
-
-
-  },
+  }
 };
 </script>
 

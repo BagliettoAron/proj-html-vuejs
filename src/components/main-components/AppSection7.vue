@@ -28,7 +28,7 @@
           <div class="form-sectionBottom">
             <input type="text" placeholder="Message" />
           </div>
-          <button class="sendButton" >send</button>
+          <button class="sendButton">send</button>
         </div>
 
         <div class="right-side">
@@ -114,9 +114,9 @@ export default {
         }
       }
 
-      .sendButton{
-          @include button--solid();
-          margin-top: .5rem;
+      .sendButton {
+        @include button--solid();
+        margin-top: 0.5rem;
       }
     }
 

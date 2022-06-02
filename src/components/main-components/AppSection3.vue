@@ -12,24 +12,23 @@
           models and capabilities so that their areas can generate sound
           information for better decision making.
         </p>
-        <button>see all</button>
+        <button class="button--empty">see all</button>
       </div>
       <div class="cardContainer">
         <div class="cardContainer__card" v-for="(cardItem, i) in card" :key="i">
           <div class="cardContainer__card__inner">
             <div class="icon">
-              <i :class="`${cardItem.leftIcon}`"></i>
-              <i :class="`${cardItem.rightIcon}`"></i>
+              <i :class="`${cardItem.leftIcon}`" class="leftIcon"></i>
+              <i :class="`${cardItem.rightIcon}`" class="rightIcon"></i>
             </div>
             <div class="card-title">
-              <h4>{{cardItem.title}}</h4>
+              <h4>{{ cardItem.title }}</h4>
             </div>
             <p class="grey-text">
-             {{cardItem.paragraph}}
+              {{ cardItem.paragraph }}
             </p>
           </div>
         </div>
-      
       </div>
     </div>
   </section>
@@ -38,48 +37,48 @@
 <script>
 export default {
   name: "AppSection3",
-  data: function (){
-      return{
-          card : [
-              {
-                  leftIcon: "fas fa-network-wired",
-                  rightIcon: "fas fa-arrow-right",
-                  title: "Audit & Assurance",
-                  paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
-              },
-               {
-                  leftIcon: "fas fa-briefcase",
-                  rightIcon: "fas fa-arrow-right",
-                  title: "Financial Advisory",
-                  paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
-              },
-               {
-                  leftIcon: "fas fa-chart-bar",
-                  rightIcon: "fas fa-arrow-right",
-                  title: "Analytics and M&A",
-                  paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
-              },
-               {
-                  leftIcon: "fas fa-plane",
-                  rightIcon: "fas fa-arrow-right",
-                  title: "Middle Marketing",
-                  paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
-              },
-               {
-                  leftIcon: "fas fa-globe",
-                  rightIcon: "fas fa-arrow-right",
-                  title: "Legal Consulting",
-                  paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
-              },
-               {
-                  leftIcon: "fas fa-archive",
-                  rightIcon: "fas fa-arrow-right",
-                  title: "Regulatory Risk",
-                  paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
-              },
-          ]
-      }
-  }
+  data: function () {
+    return {
+      card: [
+        {
+          leftIcon: "fas fa-network-wired",
+          rightIcon: "fas fa-arrow-right",
+          title: "Audit & Assurance",
+          paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        },
+        {
+          leftIcon: "fas fa-briefcase",
+          rightIcon: "fas fa-arrow-right",
+          title: "Financial Advisory",
+          paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        },
+        {
+          leftIcon: "fas fa-chart-bar",
+          rightIcon: "fas fa-arrow-right",
+          title: "Analytics and M&A",
+          paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        },
+        {
+          leftIcon: "fas fa-plane",
+          rightIcon: "fas fa-arrow-right",
+          title: "Middle Marketing",
+          paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        },
+        {
+          leftIcon: "fas fa-globe",
+          rightIcon: "fas fa-arrow-right",
+          title: "Legal Consulting",
+          paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        },
+        {
+          leftIcon: "fas fa-archive",
+          rightIcon: "fas fa-arrow-right",
+          title: "Regulatory Risk",
+          paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -150,6 +149,10 @@ export default {
         font-size: 1.5rem;
       }
 
+      &__inner:hover .leftIcon {
+        color: white;
+      }
+
       .card-title {
         color: $financial-risk-title-color;
         padding: 1rem 0;
@@ -162,5 +165,38 @@ export default {
       }
     }
   }
+}
+
+.cardContainer__card:hover .leftIcon {
+  color: $financial-risk-title-color;
+}
+
+.rightIcon{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 35px;
+  background-color: transparent;
+  display: inline-block;
+}
+
+.cardContainer__card:hover .rightIcon {
+  color: $financial-risk-title-color;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 35px;
+  background-color: $highlight-title-background-no-traparency;
+  display: inline-block;
+}
+
+.button--empty:hover {
+    background-color: #058283;
+    border: none;
+    border: 1px solid $button-solid-color;
+    color: white;
+    font-size: .8rem
 }
 </style>

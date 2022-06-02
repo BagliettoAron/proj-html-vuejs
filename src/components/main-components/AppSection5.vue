@@ -18,15 +18,51 @@
       <div class="card-section">
         <div class="card">
           <img src="../../assets/img/news-1.jpg" alt="" />
+          <div class="topHover">
+            <div class="topHover-inner">
+              <span> <i class="far fa-user"></i> Andre Miller </span>
+
+              <span><i class="far fa-clock"></i> 2 Days Ago</span>
+            </div>
+          </div>
           <h4>increasing creativity is possible for everyone</h4>
+          <div class="bottomHover">
+            <span
+              >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            </span>
+          </div>
         </div>
         <div class="card">
           <img src="../../assets/img/news-2.jpg" alt="" />
+          <div class="topHover">
+            <div class="topHover-inner">
+              <span> <i class="far fa-user"></i> Andre Miller </span>
+
+              <span><i class="far fa-clock"></i> 2 Days Ago</span>
+            </div>
+          </div>
           <h4>Because market research is part of the business plan</h4>
+           <div class="bottomHover">
+            <span
+              >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            </span>
+          </div>
         </div>
         <div class="card">
           <img src="../../assets/img/news-3.jpg" alt="" />
+          <div class="topHover">
+            <div class="topHover-inner">
+              <span> <i class="far fa-user"></i> Andre Miller </span>
+
+              <span><i class="far fa-clock"></i> 2 Days Ago</span>
+            </div>
+          </div>
           <h4>Working from home is now a trend</h4>
+           <div class="bottomHover">
+            <span
+              >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -98,12 +134,46 @@ export default {
     h4 {
       position: absolute;
       left: 50%;
-      bottom: 5%;
+      top: 70%;
       transform: translate(-50%, -50%);
       width: 90%;
       text-align: center;
       color: $financial-risk-title-color;
     }
   }
+}
+
+.topHover {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  display: none;
+
+  .topHover-inner {
+    display: flex;
+    justify-content: space-between;
+    color: $financial-risk-title-color;
+    font-weight: 300;
+  }
+}
+
+.card:hover .topHover,
+.card:hover .bottomHover {
+  display: block;
+}
+
+.bottomHover {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+  color: $financial-risk-title-color;
+  font-weight: 300;
+  font-size: 0.8rem;
+  display: none;
 }
 </style>

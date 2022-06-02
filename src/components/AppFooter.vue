@@ -18,7 +18,7 @@
             ><i class="fas fa-map-marker-alt"></i
             >{{ contactData.position }}</span
           >
-          <button>Get in Touch</button>
+          <button class="button--empty">Get in Touch</button>
         </div>
 
         <div class="card-menu" v-for="(item, i) in listItem" :key="i">
@@ -143,10 +143,18 @@ export default {
         width: 100%;
       }
 
-      button {
+      .button--empty {
         @include button--empty();
         width: 80%;
         color: $button-solid-color;
+        font-size: 0.6rem;
+      }
+
+      .button--empty:hover {
+        background-color: #058283;
+        border: none;
+        border: 1px solid $button-solid-color;
+        color: white;
         font-size: 0.6rem;
       }
     }
@@ -168,6 +176,8 @@ export default {
     .greenBottomFooter {
       color: $button-solid-color;
     }
+
+    
   }
 }
 </style>

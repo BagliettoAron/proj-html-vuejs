@@ -36,7 +36,7 @@
           <span><i class="fas fa-phone"></i> +01 (305) 1234-5678</span>
           <span><i class="fas fa-envelope"></i>hello@example.com</span>
           <span><i class="fas fa-map-marker-alt"></i>Main Avenue, 987</span>
-          <button>view map</button>
+          <button class="button--empty">view map</button>
         </div>
       </div>
     </div>
@@ -145,10 +145,18 @@ export default {
         color: $grey-text-color;
       }
 
-      button {
+      .button--empty {
         @include button--empty();
         width: 7rem;
         color: $button-solid-color;
+      }
+
+      .button--empty:hover {
+        background-color: #058283;
+        border: none;
+        border: 1px solid $button-solid-color;
+        color: white;
+        font-size: 0.8rem;
       }
     }
   }

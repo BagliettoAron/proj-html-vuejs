@@ -62,4 +62,12 @@ export default {
     }
   }
 }
+
+.button--empty:hover {
+    background-color: #058283;
+    border: none;
+    border: 1px solid $button-solid-color;
+    color: white;
+    font-size: .8rem
+}
 </style>

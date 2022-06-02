@@ -70,6 +70,8 @@ export default {
 <style lang="scss">
 @import "./style/common.scss";
 
-#app {
+.button--empty:hover {
+    background-color: red;
+    
 }
 </style>

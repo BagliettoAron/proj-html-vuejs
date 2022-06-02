@@ -5,7 +5,7 @@
         <div class="card-menu left-menu">
           <div class="titleLogo">
             <span class="titleHighligts"> nex </span>
-            gen
+           <span> gen</span>
           </div>
           <p>A functional HTML template for Corporate & Business.</p>
           <span class="iconText"
@@ -115,14 +115,15 @@ export default {
         text-transform: uppercase;
         margin-top: 1rem;
         color: $grey-text-color;
-        font-weight: 900;
+        font-weight: 600;
 
         .titleHighligts {
           text-transform: uppercase;
-          background-color: $button-solid-color;
-          padding: 0.3rem 0 0.3rem 0.7rem;
-          border-radius: 10px 0 0 10px;
+          background-color: $nexgen-bg-color-trasparency;
+          padding: 0.3rem 0 0.3rem 1rem;
+          border-radius: 45% 0 0 45%;
           margin-right: 0.3rem;
+          color: $nexgen-txt-color;
         }
       }
 

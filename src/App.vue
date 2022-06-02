@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <AppHeader />
+    <AppHeader :info="generalInfo" :nav="headerNavMenu"/>
     <AppMain />
-    <AppFooter :listItem="footerMenu" :contactData="contacts" />
+    <AppFooter :listItem="footerMenu" :contactData="generalInfo" />
   </div>
 </template>
 
@@ -55,11 +55,13 @@ export default {
           ],
         },
       ],
-      contacts: {
+      generalInfo: {
         phoneNumber: "+1 (305) 1234-5678",
         emailAdress: "hello@example.com",
         position: "Main Avenue, 987",
+        openTimeTables: "Open Hours: Mon-Sat - 9:00 - 18:00"
       },
+      headerNavMenu :['home', 'about', 'services', 'team', 'blog']
     };
   },
 };
